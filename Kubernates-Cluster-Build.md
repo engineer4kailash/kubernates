@@ -28,9 +28,21 @@ Prepare 4 Server for the Kubernates cluster
 
   - Disable SElinux and update firewall rules
 ```sh
-    run command on all 4 Nodes
-     setenforce 0
-     sed -i --follow-symlinks 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
-     systemctl stop firewalld
-     systemctl disable firewalld
+     run command on all 4 Nodes
+       setenforce 0
+       sed -i --follow-symlinks 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
+       systemctl stop firewalld
+       systemctl disable firewalld
+```
+
+  - Update DNS File.
+```sh
+cat >/etc/resolve.conf
+nameserver 8.8.8.8
+```
+
+  - Disable swap
+```sh
+vi /etc/fstab
+open /etc/fstab file, search for the swap line and comment the entire line by adding a # (hashtag) sign in front of the line
 ```
