@@ -10,7 +10,8 @@ Prepare 3 Server for the Kubernates cluster
 
 ### Configure All Nodes
   - Set host name of each node
-    >run command on Master node = hostnamectl set-hostname master-node
-    >run command on worker-node-1= hostnamectl set-hostname worker-node-1
-    >run command on worker-node-2 = hostnamectl set-hostname worker-node-2
-    >run command on worker-node-3 = hostnamectl set-hostname worker-node-3
+```sh
+    run command on Master node = hostnamectl set-hostname master-node
+    run command on worker-node-1= hostnamectl set-hostname worker-node-1
+    run command on worker-node-2 = hostnamectl set-hostname worker-node-2
+    run command on worker-node-3 = hostnamectl set-hostname worker-node-3
