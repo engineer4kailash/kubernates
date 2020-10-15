@@ -12,3 +12,6 @@
 |kubectl get nodes -o json            |Get a pod's json
 |kubectl get pods --all-namespaces     |All pods in All NameSpaces
 |kubectl get pv                         |List PV
+
+## Compares the current state of the cluster against the state that the cluster would be in if the manifest was applied.
+kubectl diff -f ./my-manifest.yaml
