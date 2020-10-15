@@ -15,3 +15,12 @@ Prepare 3 Server for the Kubernates cluster
     run command on worker-node-1= hostnamectl set-hostname worker-node-1
     run command on worker-node-2 = hostnamectl set-hostname worker-node-2
     run command on worker-node-3 = hostnamectl set-hostname worker-node-3
+
+  - Update host file 
+```sh
+    cat <<EOF>> /etc/hosts
+    192.168.0.100 master-node
+    192.168.0.101 node-1 worker-node-1
+    192.168.0.102 node-2 worker-node-2
+    192.168.0.103 node-3 worker-node-3
+    EOF
