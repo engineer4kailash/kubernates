@@ -85,7 +85,7 @@ Prepare 4 Server for the Kubernates cluster
 	Configure Kubernates Service
 	systemctl enable kubelet
 	systemctl start kubelet
-
+```
 * Configure Master Node(Kube Cluster)
 ```sh
 	Initate Cluster.
@@ -101,3 +101,4 @@ Prepare 4 Server for the Kubernates cluster
 
 	Configure Pod Networking(Master Node).
 	__kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml__
+```
