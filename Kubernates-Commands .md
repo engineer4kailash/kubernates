@@ -1,6 +1,6 @@
 # Kubernate Important Commands
 
-##Get commands with basic output
+## Get commands with basic output
 |Command |Description|
 |--------|-----------|
 |kubectl get services|List all services in the namespace|
