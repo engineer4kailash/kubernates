@@ -48,15 +48,19 @@ Prepare 4 Server for the Kubernates cluster
 ```
 * Install & Configure Docker (All Nodes)
 ```sh
-    Remove podman if installed
+	Remove podman if installed
         yum remove pod* -y
-    Enable Docker CE Repository
+    
+	Enable Docker CE Repository
         dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
-    List docker Repository
+	
+	List docker Repository
         dnf list docker-ce
-    Install docker
+    	
+	Install docker
         dnf install docker-ce --nobest -y
-    Configure Docker Service
+    	
+	Configure Docker Service
         systemctl enable docker
         systemctl start docker
 ```
