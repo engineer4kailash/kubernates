@@ -102,5 +102,7 @@ Prepare 4 Server for the Kubernates cluster
 	Configure Pod Networking(Master Node).
 		kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 ```
-* Check Node Status 
+* Check Node Status
+```
 	Kubectl get nodes
+```
