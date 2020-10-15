@@ -77,7 +77,7 @@ Prepare 4 Server for the Kubernates cluster
 	gpgcheck=1
 	repo_gpgcheck=1
 	gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
-EOF
+	EOF
 
 	Install Kubernate package 
 	yum install kubeadm -y
