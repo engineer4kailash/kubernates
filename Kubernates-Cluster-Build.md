@@ -9,15 +9,14 @@ Prepare 4 Server for the Kubernates cluster
 |worker-node-3|192.168.0.103|255.255.255.0|192.168.0.1|8.8.8.8|2CPU|4GB|Cent OS 7|
 
 ### Configure All Nodes
-	* Set host name of each node
-
+* Set host name of each node
 ```sh
 	run command on Master node = hostnamectl set-hostname master-node
     	run command on worker-node-1= hostnamectl set-hostname worker-node-1
     	run command on worker-node-2 = hostnamectl set-hostname worker-node-2
     	run command on worker-node-3 = hostnamectl set-hostname worker-node-3
 ```
-	- Update host file(run command on all 4 Nodes)
+* Update host file(run command on all 4 Nodes)
 ```sh
 	cat <<EOF>> /etc/hosts
 	192.168.0.100 master-node
@@ -26,27 +25,24 @@ Prepare 4 Server for the Kubernates cluster
     	192.168.0.103 node-3 worker-node-3
 	EOF
 ```
-	- Disable SElinux and update firewall rules(run command on all 4 Nodes)
+* Disable SElinux and update firewall rules(run command on all 4 Nodes)
 ```sh
 	setenforce 0
 	sed -i --follow-symlinks 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
 	systemctl stop firewalld
 	systemctl disable firewalld
 ```
-
-	- Update DNS File.
+* Update DNS File.
 ```sh
 	cat >/etc/resolve.conf
 	nameserver 8.8.8.8
 ```
-
-	- Disable swap
+* Disable swap
 ```sh
-	vi /etc/fstab
-	open /etc/fstab file, search for the swap line and comment the entire line by adding a # (hashtag) sign in front of the line
+		open /etc/fstab file, search for the swap line and comment the entire line by adding a # (hashtag) sign in front of the line
+		vi /etc/fstab
 ```
-	- Reboot
+* Reboot
 ```sh
 	reboot
-	
 ```
