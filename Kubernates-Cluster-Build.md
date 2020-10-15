@@ -9,7 +9,8 @@ Prepare 4 Server for the Kubernates cluster
 |worker-node-3|192.168.0.103|255.255.255.0|192.168.0.1|8.8.8.8|2CPU|4GB|Cent OS 7|
 
 ### Configure All Nodes
-	- Set host name of each node
+	* Set host name of each node
+
 ```sh
 	run command on Master node = hostnamectl set-hostname master-node
     	run command on worker-node-1= hostnamectl set-hostname worker-node-1
