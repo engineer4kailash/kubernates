@@ -97,8 +97,10 @@ Prepare 4 Server for the Kubernates cluster
 		sudo chown $(id -u):$(id -g) $HOME/.kube/config
 	
 	Copy output of above command and run on worker nodes to join cluster((like Below)
-		kubeadm join 192.168.0.101:6443 --token ipcm0q.gvlksw3ytdf14oel \ --discovery-token-ca-cert-hash sha256:7af12851ed2021a9432c722470c399078b41503c06ea37af9198d55b2d1b2878__
+		kubeadm join 192.168.0.101:6443 --token ipcm0q.gvlksw3ytdf14oel \ --discovery-token-ca-cert-hash sha256:7af12851ed2021a9432c722470c399078b41503c06ea37af9198d55b2d1b2878
 
 	Configure Pod Networking(Master Node).
 		kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 ```
+* Check Node Status 
+	Kubectl get nodes
