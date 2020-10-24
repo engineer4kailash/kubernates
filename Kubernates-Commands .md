@@ -1,6 +1,6 @@
 # Kubernate Important Commands
 
-## Get commands with basic output
+## Commands with basic output
 |Command |Description|
 |--------|-----------|
 |kubectl get services|				|List all services in the namespace|
@@ -13,6 +13,7 @@
 |kubectl get pods --all-namespaces		|All pods in All NameSpaces|
 |kubectl get pv					|List PV|
 |kubeadm token create --print-join-command	|Cluster Token for Worker nodes to join Cluster|
+|kubectl cordon $NODENAME  			|To mark a Node unschedulable|
 
 ## Compares the current state of the cluster against the state that the cluster would be in if the manifest was applied.
 kubectl diff -f ./my-manifest.yaml
